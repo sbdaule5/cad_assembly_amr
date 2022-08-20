@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cad_assembly_amr">
+  <link name="dummy_base">
+    <!-- A dummy base link that will be joint to actual base link -->
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.154134791457833 0.128335370253244 -0.0303964618780423"
+        rpy="0 0 0" />
+      <mass
+        value="17.7243278923098" />
+      <inertia
+        ixx="0.151725562910189"
+        ixy="-8.71905706353453E-05"
+        ixz="6.41177130083307E-05"
+        iyy="0.209426046443263"
+        iyz="1.49024569509322E-05"
+        izz="0.10643501504363" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cad_assembly_amr/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 3.14" />
+      <geometry>
+        <mesh
+          filename="package://cad_assembly_amr/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Wheel_1">
+    <inertial>
+      <origin
+        xyz="0.014918 5.7394E-05 -0.028822"
+        rpy="0 0 0" />
+      <mass
+        value="1.1541" />
+      <inertia
+        ixx="0.0029866"
+        ixy="8.3069E-08"
+        ixz="-8.6212E-08"
+        iyy="0.0016967"
+        iyz="1.4748E-07"
+        izz="0.0016788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cad_assembly_amr/meshes/Wheel_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cad_assembly_amr/meshes/Wheel_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_0" type="fixed">
+    <parent link="dummy_base"/>
+    <child link="base_link"/>
+  </joint>
+  <joint
+    name="joint_1"
+    type="fixed">
+    <origin
+      xyz="0.06494 -0.17933 0.05"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Wheel_2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cad_assembly_amr/meshes/Wheel_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cad_assembly_amr/meshes/Wheel_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="fixed">
+    <origin
+      xyz="0.06494 0.24167 0.07816"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
