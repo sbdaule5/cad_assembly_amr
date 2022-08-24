@@ -36,7 +36,7 @@
     <!-- ********** LIDAR ***********    -->
     <link name="lidar_link">
       <inertial>
-        <pose>-0.15 0 0.31 0 0 3.14</pose>
+        <pose>-0.15 0 0.31 0 0 0</pose>
         <inertia>
           <ixx>0.001</ixx>
           <ixy>0.000</ixy>
@@ -75,7 +75,7 @@
       </visual>
 
       <sensor name="lidar" type="ray">
-        <pose>-0.15 0 0.45 0 0 0</pose>
+        <pose>-0.15 0 0.45 0 0 3.14</pose>
         <always_on>true</always_on>
         <visualize>true</visualize>
         <update_rate>5</update_rate>
