@@ -18,9 +18,9 @@ def generate_launch_description():
   pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')   
   pkg_share = FindPackageShare(package='amr_sim_ros2').find('amr_sim_ros2')
   default_launch_dir = os.path.join(pkg_share, 'launch')
-  default_model_path = os.path.join(pkg_share, 'models/cad_assembly_amr_v3.urdf')
+  default_model_path = os.path.join(pkg_share, 'models/amr_sim_ros2.urdf')
   robot_localization_file_path = os.path.join(pkg_share, 'config/ekf.yaml') 
-  robot_name_in_urdf = 'cad_assembly_amr'
+  robot_name_in_urdf = 'amr_bot'
   default_rviz_config_path = os.path.join(pkg_share, 'rviz/nav2_config.rviz')
   world_file_name = 'empty_world/smalltown.world'
   world_path = os.path.join(pkg_share, 'worlds', world_file_name)
