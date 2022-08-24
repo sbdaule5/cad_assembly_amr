@@ -1,5 +1,5 @@
 <sdf version='1.7'>
-  <model name='cad_assembly_amr'>
+  <model name='amr_bot'>
     <link name='base_footprint'>
       <inertial>
         <pose>0.154135 0.097335 -0.030396 0 -0 0</pose>
