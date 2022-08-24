@@ -16,7 +16,7 @@ def generate_launch_description():
  
   # Set the path to different files and folders.
   pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')   
-  pkg_share = FindPackageShare(package='cad_assembly_amr').find('cad_assembly_amr')
+  pkg_share = FindPackageShare(package='amr_sim_ros2').find('amr_sim_ros2')
   default_launch_dir = os.path.join(pkg_share, 'launch')
   default_model_path = os.path.join(pkg_share, 'models/cad_assembly_amr_v3.urdf')
   robot_localization_file_path = os.path.join(pkg_share, 'config/ekf.yaml') 

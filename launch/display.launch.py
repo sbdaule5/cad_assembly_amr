@@ -10,8 +10,8 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     urdf_tutorial_path = get_package_share_path('urdf_tutorial')
-    cad_assembly_amr_path = get_package_share_path('cad_assembly_amr')
-    default_model_path = cad_assembly_amr_path / 'models/cad_assembly_amr.urdf'
+    cad_assembly_amr_path = get_package_share_path('amr_sim_ros2')
+    default_model_path = cad_assembly_amr_path / 'models/cad_assembly_amr_v3.urdf'
     print(default_model_path)
     default_rviz_config_path = urdf_tutorial_path / 'rviz/urdf.rviz'
 
