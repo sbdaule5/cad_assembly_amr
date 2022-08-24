@@ -26,7 +26,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://cad_assembly_amr/meshes/base_link.STL</uri>
+            <uri>model://amr_bot/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -220,6 +220,16 @@
       <child>wheel_l</child>
       <axis>
         <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.1415</lower>
+          <upper>3.1415</upper>
+          <effort>30</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
       </axis>
     </joint>
     <link name='wheel_l'>
@@ -250,7 +260,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://cad_assembly_amr/meshes/Wheel_2.STL</uri>
+            <uri>model://amr_bot/meshes/Wheel_2.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -261,7 +271,7 @@
       <child>wheel_r</child>
       <axis>
         <xyz>0 1 0</xyz>
-        <!-- <limit>
+        <limit>
           <lower>-3.1415</lower>
           <upper>3.1415</upper>
           <effort>30</effort>
@@ -270,7 +280,7 @@
         <dynamics>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
-        </dynamics> -->
+        </dynamics>
       </axis>
     </joint>
     <link name='wheel_r'>
@@ -301,7 +311,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://cad_assembly_amr/meshes/Wheel_2.STL</uri>
+            <uri>model://amr_bot/meshes/Wheel_2.STL</uri>
           </mesh>
         </geometry>
       </visual>
